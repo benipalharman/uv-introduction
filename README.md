@@ -360,3 +360,22 @@ deactivate
 The key thing to remember is:
 
 > **When the virtual environment is activated, `which python` should point to `.venv/bin/python`.**
+
+### Add Dependencies from requirements.txt
+
+If you already have a requirements.txt file and want to add all its packages to your uv project, use:
+
+```bash
+uv add -r requirements.txt
+```
+
+For example, if requirements.txt contains:
+
+pydantic
+fastapi
+
+This will:
+
+Add the packages to pyproject.toml
+Update uv.lock
+Install the dependencies into the project's environment
